@@ -1,5 +1,5 @@
-FROM registry.centos.org/centos/centos
-MAINTAINER Jooho Lee
+FROM centos
+MAINTAINER dasomell@gmail.com
 ENV HOME=/opt/scouter-test-app \
     TOMCAT_HOME=/opt/scouter-test-app/apache-tomcat-7.0.67
 

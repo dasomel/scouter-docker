@@ -13,7 +13,7 @@ fi
 
 # Update Scouter Ports
 # UDP Receive Port(Default : 6100)
-net_collector_udp_port=${NET_COLLECTOR_UDP_PORT:-6101}
+net_collector_udp_port=${NET_COLLECTOR_UDP_PORT:-6100}
 
 # TCP Receive Port(Default : 6100)
 net_collector_tcp_port=${NET_COLLECTOR_TCP_PORT:-6100}

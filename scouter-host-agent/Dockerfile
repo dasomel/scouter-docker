@@ -1,5 +1,5 @@
-FROM registry.centos.org/centos/centos
-MAINTAINER Jooho Lee
+FROM centos
+MAINTAINER dasomell@gmail.com
 ENV HOME=/opt/host-agent
 
 RUN yum install -y java-1.8.0-openjdk  \

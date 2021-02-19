@@ -39,7 +39,7 @@ cd ${SCOUTER_HOME}/scouter-server
 ```
 **2.Test**
 ```
-docker run -it --name scouter-server -p 6100:6100/tcp -p 6101:6101/udp ljhiyh/scouter-server
+docker run -it --name scouter-server -p 6100:6100/tcp -p 6100:6100/udp ljhiyh/scouter-server
 
  / ___|  ___ ___  _   _| |_ ___ _ __ 
  \___ \ / __/   \| | | | __/ _ \ '__|

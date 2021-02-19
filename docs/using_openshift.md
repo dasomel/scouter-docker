@@ -15,7 +15,7 @@ Deploy Scouter Server
 
 *Default Params*:
 - NET_TCP_LISTEN_PORT=6100
-- NET_UDP_LISTEN_PORT=6101
+- NET_UDP_LISTEN_PORT=6100
 
 **Using Default Configuration**
 
@@ -25,7 +25,7 @@ oc process -f ${SCOUTER_HOME}/scouter-server/scouter-server-template.yaml | oc c
 
 **Using Custom Configuration**
 ```
-oc process -f ${SCOUTER_HOME}/scouter-server/scouter-server-template.yaml -v NET_TCP_LISTEN_PORT=6101 -v NET_UDP_LISTEN_PORT=6102| oc create -f -
+oc process -f ${SCOUTER_HOME}/scouter-server/scouter-server-template.yaml -v NET_TCP_LISTEN_PORT=6100 -v NET_UDP_LISTEN_PORT=6102| oc create -f -
 ```
 
 Deploy Scouter Host Agent
@@ -35,7 +35,7 @@ Deploy Scouter Host Agent
 - The Scouter Server IP can be configuable
 
 *Default Params*:
-- NET_COLLECTOR_UDP_PORT=6101
+- NET_COLLECTOR_UDP_PORT=6100
 - NET_COLLECTOR_IP=$SCOUTER_SERVER_SERVICE_HOST
 
 **Using Default Configuration**
@@ -56,7 +56,7 @@ Deploy Test Application (tomcat-websocket-chat)
 
 *Default Params*:
 - NET_COLLECTOR_TCP_PORT=6100
-- NET_COLLECTOR_UDP_PORT=6101
+- NET_COLLECTOR_UDP_PORT=6100
 - NET_COLLECTOR_IP=$(scouter-server ip)
 - HOOK_METHOD_PATTERNS=org.mybatis.jpetstore.*.*
 

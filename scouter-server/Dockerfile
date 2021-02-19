@@ -1,5 +1,5 @@
-FROM registry.centos.org/centos/centos
-MAINTAINER Jooho Lee
+FROM centos
+MAINTAINER dasomell@gmail.com
 ENV HOME=/opt/server
 
 RUN yum install -y java-1.8.0-openjdk  \
@@ -22,7 +22,7 @@ WORKDIR ${HOME}
 RUN chown -R 1001:0 ${HOME} && \
     chmod 775 -R ${HOME} 
 EXPOSE 6100/TCP
-EXPOSE 6101/UDP
+EXPOSE 6100/UDP
 USER 1001
 CMD [ "/opt/server/entrypoint.sh" ]
 #ENTRYPOINT  ${HOME}/scouter/entrypoint.sh

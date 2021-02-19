@@ -7,15 +7,15 @@ Deploy Scouter Server
 
 *Default Params*:
 - NET_TCP_LISTEN_PORT=6100
-- NET_UDP_LISTEN_PORT=6101
+- NET_UDP_LISTEN_PORT=6100
 
 **Using Default Configuration**
 ```
-docker run -it --name scouter-server -p 6100:6100/tcp -p 6101:6101/udp ljhiyh/scouter-server
+docker run -it --name scouter-server -p 6100:6100/tcp -p 6100:6100/udp ljhiyh/scouter-server
 ```
 **Using Custom Configuration**
 ```
-docker run -it --name scouter-server -p 6101:6101/tcp -p 6102:6102/udp -e NET_TCP_LISTEN_PORT=6101 -e NET_UDP_LISTEN_PORT=6102 ljhiyh/scouter-server
+docker run -it --name scouter-server -p 6100:6100/tcp -p 6102:6102/udp -e NET_TCP_LISTEN_PORT=6100 -e NET_UDP_LISTEN_PORT=6102 ljhiyh/scouter-server
 ```
 
 Deploy Scouter Host Agent
@@ -25,7 +25,7 @@ Deploy Scouter Host Agent
 - The Scouter Server IP can be configuable
 
 *Default Params*:
-- NET_COLLECTOR_UDP_PORT=6101
+- NET_COLLECTOR_UDP_PORT=6100
 - NET_COLLECTOR_IP=$(scouter-server ip)
 
 **Using Default Configuration**
@@ -47,7 +47,7 @@ Deploy Test Application (JpetStore)
 
 *Default Params*:
 - NET_COLLECTOR_TCP_PORT=6100
-- NET_COLLECTOR_UDP_PORT=6101
+- NET_COLLECTOR_UDP_PORT=6100
 - NET_COLLECTOR_IP=$(scouter-server ip)
 - HOOK_METHOD_PATTERNS=org.mybatis.jpetstore.*.*
 
@@ -59,7 +59,7 @@ docker run -it --link scouter-server -p 8080:8080 -e OBJ_NAME=scouter-jpetstore 
 
 **Using Custome Configuration**
 ```
-docker run -it --link scouter-server -e OBJ_NAME=scouter-jpetstore -e HOOK_METHOD_PATTERNS=org -e NET_COLLECTOR_IP=172.0.0.1 -e NET_COLLECTOR_UDP_PORT=6102 -e NET_COLLECTOR_TCP_PORT=6101 ljhiyh/scouter-test-app
+docker run -it --link scouter-server -e OBJ_NAME=scouter-jpetstore -e HOOK_METHOD_PATTERNS=org -e NET_COLLECTOR_IP=172.0.0.1 -e NET_COLLECTOR_UDP_PORT=6102 -e NET_COLLECTOR_TCP_PORT=6100 ljhiyh/scouter-test-app
 ```
 **Test URL**
 ```

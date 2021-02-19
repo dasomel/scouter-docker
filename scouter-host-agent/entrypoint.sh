@@ -9,7 +9,7 @@ then
 fi
 # Update Scouter Ports
 # UDP Receive Port(Default : 6100)
-net_collector_udp_port=${NET_COLLECTOR_UDP_PORT:-6101}
+net_collector_udp_port=${NET_COLLECTOR_UDP_PORT:-6100}
 
 
 sed "s/%NET_COLLECTOR_IP%/${net_collector_ip}/g" -i conf/scouter.conf

@@ -1,5 +1,5 @@
 FROM registry.access.redhat.com/jboss-webserver-3/webserver30-tomcat7-openshift
-MAINTAINER Jooho Lee
+MAINTAINER dasomell@gmail.com
 ENV JWS_HOME=/opt/webserver \ 
     HOME=/home/jboss
 

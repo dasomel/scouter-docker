@@ -43,5 +43,5 @@ parameters:
 - description: Scouter UDP Listen Port to be accssible from client
   displayName: Scouter UDP Port
   name: NET_COLLECTOR_UDP_PORT
-  value: "6101"
+  value: "6100"
 

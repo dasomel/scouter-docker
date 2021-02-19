@@ -23,7 +23,7 @@ objects:
       openshift.io/imported-from: ljhiyh/webserver30-tomcat7-openshift:latest
       from:
         kind: DockerImage
-        name: docker.io/ljhiyh/webserver30-tomcat7-openshift:latest
+        name: docker.io/dasomel/webserver30-tomcat7-openshift:latest
       generation: 2
       importPolicy: {}
       name: latest
@@ -217,7 +217,7 @@ parameters:
 - description: Scouter UDP Listen Port to be accssible from client
   displayName: Scouter UDP Port
   name: NET_COLLECTOR_UDP_PORT
-  value: "6101"
+  value: "6100"
 - description: Scouter TCP Listen Port to be accssible from client
   displayName: Scouter TCP Port
   name: NET_COLLECTOR_TCP_PORT

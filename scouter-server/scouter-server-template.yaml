@@ -16,7 +16,7 @@ objects:
         openshift.io/imported-from: ljhiyh/scouter-server:latest
       from:
         kind: DockerImage
-        name: docker.io/ljhiyh/scouter-server:latest
+        name: docker.io/scouterdocker/scouter-server:latest
       importPolicy: {}
       name: latest
       referencePolicy:
@@ -38,7 +38,7 @@ objects:
     - name: ${NET_UDP_LISTEN_PORT}-udp
       port: ${NET_UDP_LISTEN_PORT}
       protocol: UDP
-      targetPort: 6101
+      targetPort: 6100
     selector:
       app: ${APP_NAME}
       deploymentconfig: ${APP_NAME}
@@ -119,4 +119,4 @@ parameters:
 - description: Scouter UDP Port to be accssible from client
   displayName: Scouter UDP Port
   name: NET_UDP_LISTEN_PORT
-  value: "6101"
+  value: "6100"
